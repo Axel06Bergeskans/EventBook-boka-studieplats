@@ -1,0 +1,24 @@
+.Boknings-kort {
+    max-width: 250px;
+    background-color: lightblue;
+    margin-bottom: auto;
+    padding: 3rem;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    border-image: none;
+    border-radius: 8px;
+}
+
+.Avboka-Tiden {
+    background-color: red;
+    max-width: 100px;
+    line-height: 0.3rem;
+    margin-bottom: auto;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-image: none;
+}
