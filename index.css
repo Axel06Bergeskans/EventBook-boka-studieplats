@@ -1,0 +1,34 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/ai-generated-dental-clinic-advertisment-background-with-copy-space-free-photo.jpg);
+    background-size: cover;
+
+}
+
+.headerNavBox{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 11rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    background-color: whitesmoke;
+    box-shadow: 0 .8rem .5rem -.6rem rgba(0, 0, 0, .2);
+}
+
+header img{
+    height: 45%;
+    cursor: pointer;
+}
+
