@@ -30,7 +30,7 @@ nav {
 }
 
 nav a {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   min-height: 40px;
@@ -49,6 +49,133 @@ nav a {
 nav a:hover {
   background-color: #dff1ea;
 }
+
+/* Schema som kort */
+.grid {
+  display: grid;
+  grid-template-columns: 50px repeat(5, 1fr);
+  gap: 8px;
+  max-width: 1060px;
+  margin: 2rem auto;
+  padding: 15px;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.grid:empty {
+  display: none;
+}
+
+.head {
+  font-weight: bold;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.time {
+  font-size: 15px;
+  color: #46575c;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+/* Ledig tid */
+.slot {
+  min-height: 46px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #17614f;
+  background: #dff1ea;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.slot:hover {
+  background: #c8e8dc;
+}
+
+/* Vald tid */
+.vald {
+  outline: 1px solid #17262b;
+  
+}
+
+/* Upptagen tid */
+.slot:disabled {
+  color: #7a1f17;
+  font-weight: normal;
+  background: #f4c7c3;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+
+/* Formulär som kort */
+form {
+  max-width: 1060px;
+  margin: 20px auto;
+  padding: 24px;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+input {
+  width: 600px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+form button {
+  width: 600px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #17262b;
+  background-color: #dff1ea;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #c8e8dc;
+}
+
+/* Meddelanden */
+#fel {
+  color: #b00020;
+  font-weight: bold;
+  margin: 10px 0 0;
+}
+
+#bekraftelse {
+  margin: 12px 0 0;
+  color: #17614f;
+  font-weight: bold;
+}
+
+#bekraftelse:empty {
+  display: none;
+}
+
 
 
 
