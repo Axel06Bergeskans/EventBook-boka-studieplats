@@ -6,6 +6,9 @@
     padding: 3rem;
     border: 5px solid black;
     border-radius: 8px;
+    margin-top: 60px;
+    display: block;
+    margin-left: 30px;
 }
 
 .Avboka-Tiden {
@@ -45,4 +48,31 @@ header {
 nav a {
     text-decoration: none;
     margin-left: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    max-width: 120px;
+    line-height: 0.6rem;
+    margin-bottom: auto;
+    cursor: pointer;
+    padding: 0.6rem;
+    border: 2px solid black;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.Boka-ny-tid {
+    background-color: whitesmoke;
+    max-width: 150px;
+    line-height: 1rem;
+    margin-bottom: auto;
+    cursor: pointer;
+    padding: 1rem;
+    border: 2px solid black;
+    margin-top: 50px;
+    display: block;
 }
