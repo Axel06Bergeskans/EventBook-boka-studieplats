@@ -9,16 +9,18 @@ body{
 }
 
 header{
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
     width: 100%;
     background-image: url(images/ai-generated-dental-clinic-advertisment-background-with-copy-space-free-photo.jpg);
     background-size: cover;
-
 }
 
 .headerNavBox{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 11rem;
     padding-left: 5rem;
@@ -32,3 +34,41 @@ header img{
     cursor: pointer;
 }
 
+nav{
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    gap: 1rem;
+}
+
+nav button{
+    width: 15rem;
+    border: none;
+}
+
+nav button:hover{
+    background-color: #7ac69b;
+    cursor: pointer;
+}
+
+.headerTextBox{
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: 100%;
+    margin-left: 3rem;
+    font-weight: bolder;
+    justify-content: center;
+}
+
+.headerTextBox h1{
+    font-size: 3rem;
+    margin: 0;
+}
+
+.headerTextBox p{
+    font-size: 2rem;
+    margin: 0;
+}
