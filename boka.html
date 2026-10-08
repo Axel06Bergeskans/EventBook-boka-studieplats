@@ -17,80 +17,19 @@
   <main>
     <p class="lead">Välj en ledig tid i schemat och skriv ditt namn.</p>
 
-    <!-- Schema: varje tid har ett eget id -->
-    <div class="grid" id="grid">
-      <div></div>
-      <div class="head">Mån</div>
-      <div class="head">Tis</div>
-      <div class="head">Ons</div>
-      <div class="head">Tors</div>
-      <div class="head">Fre</div>
+    <div class="grid" id="grid"></div>
 
-      <!-- 08:00 -->
-      <div class="time">08:00</div>
-      <button class="slot" type="button" id="man-08:00" data-dag="Måndag" data-tid="08:00">Ledig</button>
-      <button class="slot" type="button" id="tis-08:00" data-dag="Tisdag" data-tid="08:00">Ledig</button>
-      <button class="slot" type="button" id="ons-08:00" data-dag="Onsdag" data-tid="08:00">Ledig</button>
-      <button class="slot" type="button" id="tor-08:00" data-dag="Torsdag" data-tid="08:00">Ledig</button>
-      <button class="slot" type="button" id="fre-08:00" data-dag="Fredag" data-tid="08:00">Ledig</button>
+    <form id="form" hidden>
+      <p id="vald-tid"></p>
+      <label for="namn">Ditt namn</label>
+      <input id="namn" type="text" autocomplete="name">
+      <button type="submit">Boka</button>
+      <p id="fel" role="alert"></p>
+    </form>
 
-      <!-- 09:00 -->
-      <div class="time">09:00</div>
-      <button class="slot" type="button" id="man-09:00" data-dag="Måndag" data-tid="09:00">Ledig</button>
-      <button class="slot" type="button" id="tis-09:00" data-dag="Tisdag" data-tid="09:00">Ledig</button>
-      <button class="slot" type="button" id="ons-09:00" data-dag="Onsdag" data-tid="09:00">Ledig</button>
-      <button class="slot" type="button" id="tor-09:00" data-dag="Torsdag" data-tid="09:00">Ledig</button>
-      <button class="slot" type="button" id="fre-09:00" data-dag="Fredag" data-tid="09:00">Ledig</button>
-
-      <!-- 10:00 -->
-      <div class="time">10:00</div>
-      <button class="slot" type="button" id="man-10:00" data-dag="Måndag" data-tid="10:00">Ledig</button>
-      <button class="slot" type="button" id="tis-10:00" data-dag="Tisdag" data-tid="10:00">Ledig</button>
-      <button class="slot" type="button" id="ons-10:00" data-dag="Onsdag" data-tid="10:00">Ledig</button>
-      <button class="slot" type="button" id="tor-10:00" data-dag="Torsdag" data-tid="10:00">Ledig</button>
-      <button class="slot" type="button" id="fre-10:00" data-dag="Fredag" data-tid="10:00">Ledig</button>
-
-      <!-- 11:00 -->
-      <div class="time">11:00</div>
-      <button class="slot" type="button" id="man-11:00" data-dag="Måndag" data-tid="11:00">Ledig</button>
-      <button class="slot" type="button" id="tis-11:00" data-dag="Tisdag" data-tid="11:00">Ledig</button>
-      <button class="slot" type="button" id="ons-11:00" data-dag="Onsdag" data-tid="11:00">Ledig</button>
-      <button class="slot" type="button" id="tor-11:00" data-dag="Torsdag" data-tid="11:00">Ledig</button>
-      <button class="slot" type="button" id="fre-11:00" data-dag="Fredag" data-tid="11:00">Ledig</button>
-
-      <!-- 12:00 -->
-      <div class="time">12:00</div>
-      <button class="slot" type="button" id="man-12:00" data-dag="Måndag" data-tid="12:00">Ledig</button>
-      <button class="slot" type="button" id="tis-12:00" data-dag="Tisdag" data-tid="12:00">Ledig</button>
-      <button class="slot" type="button" id="ons-12:00" data-dag="Onsdag" data-tid="12:00">Ledig</button>
-      <button class="slot" type="button" id="tor-12:00" data-dag="Torsdag" data-tid="12:00">Ledig</button>
-      <button class="slot" type="button" id="fre-12:00" data-dag="Fredag" data-tid="12:00">Ledig</button>
-
-      <!-- 13:00 -->
-      <div class="time">13:00</div>
-      <button class="slot" type="button" id="man-13:00" data-dag="Måndag" data-tid="13:00">Ledig</button>
-      <button class="slot" type="button" id="tis-13:00" data-dag="Tisdag" data-tid="13:00">Ledig</button>
-      <button class="slot" type="button" id="ons-13:00" data-dag="Onsdag" data-tid="13:00">Ledig</button>
-      <button class="slot" type="button" id="tor-13:00" data-dag="Torsdag" data-tid="13:00">Ledig</button>
-      <button class="slot" type="button" id="fre-13:00" data-dag="Fredag" data-tid="13:00">Ledig</button>
-
-      <!-- 14:00 -->
-      <div class="time">14:00</div>
-      <button class="slot" type="button" id="man-14:00" data-dag="Måndag" data-tid="14:00">Ledig</button>
-      <button class="slot" type="button" id="tis-14:00" data-dag="Tisdag" data-tid="14:00">Ledig</button>
-      <button class="slot" type="button" id="ons-14:00" data-dag="Onsdag" data-tid="14:00">Ledig</button>
-      <button class="slot" type="button" id="tor-14:00" data-dag="Torsdag" data-tid="14:00">Ledig</button>
-      <button class="slot" type="button" id="fre-14:00" data-dag="Fredag" data-tid="14:00">Ledig</button>
-
-      <!-- 15:00 -->
-      <div class="time">15:00</div>
-      <button class="slot" type="button" id="man-15:00" data-dag="Måndag" data-tid="15:00">Ledig</button>
-      <button class="slot" type="button" id="tis-15:00" data-dag="Tisdag" data-tid="15:00">Ledig</button>
-      <button class="slot" type="button" id="ons-15:00" data-dag="Onsdag" data-tid="15:00">Ledig</button>
-      <button class="slot" type="button" id="tor-15:00" data-dag="Torsdag" data-tid="15:00">Ledig</button>
-      <button class="slot" type="button" id="fre-15:00" data-dag="Fredag" data-tid="15:00">Ledig</button>
-    </div>
+    <p id="bekraftelse" role="status"></p>
   </main>
+
 </body>
 
 </html>
