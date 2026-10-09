@@ -41,26 +41,25 @@ nav a {
   color: #17262b;
   background-color: whitesmoke;
   border: 2px solid black;
-  border-radius: 8px;
+  border-radius: 5px;
   white-space: nowrap;
-  transition: background-color 0.15s, transform 0.15s;
 }
 
 nav a:hover {
-  background-color: #dff1ea;
+  background-color: lightgray;
 }
 
 /* Schema som kort */
 .grid {
   display: grid;
-  grid-template-columns: 50px repeat(5, 1fr);
+  grid-template-columns: auto repeat(5, 1fr);
   gap: 8px;
   max-width: 1060px;
   margin: 2rem auto;
   padding: 15px;
   background-color: whitesmoke;
   border: 2px solid black;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .grid:empty {
@@ -74,8 +73,8 @@ nav a:hover {
 }
 
 .time {
-  font-size: 15px;
-  color: #46575c;
+  font-size: 1rem;
+  color: black;
   display: flex;
   align-items: center;
 }
@@ -88,24 +87,23 @@ main {
 
 /* Ledig tid */
 .slot {
-  min-height: 46px;
-  font-size: 14px;
+  min-height: 50px;
+  font-size: 1rem;
   font-weight: bold;
-  color: #17614f;
-  background: #dff1ea;
+  color: black;
+  background: whitesmoke;
   border: 2px solid black;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .slot:hover {
-  background: #c8e8dc;
+  background: lightgray;
 }
 
 /* Vald tid */
 .vald {
   outline: 1px solid #17262b;
-  
 }
 
 /* Upptagen tid */
@@ -139,7 +137,7 @@ input {
   padding: 10px;
   font-size: 16px;
   border: 2px solid black;
-  border-radius: 8px;
+  border-radius: 5px;
   margin-bottom: 12px;
 }
 
@@ -148,36 +146,29 @@ form button {
   padding: 10px 16px;
   font-size: 16px;
   font-weight: bold;
-  color: #17262b;
-  background-color: #dff1ea;
+  background-color: whitesmoke;
   border: 2px solid black;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 form button:hover {
-  background-color: #c8e8dc;
+  background-color: lightgray;
 }
 
 /* Meddelanden */
 #fel {
-  color: #b00020;
+  color: red;
   font-weight: bold;
   margin: 10px 0 0;
 }
 
 #bekraftelse {
   margin: 12px 0 0;
-  color: #17614f;
+  color: green;
   font-weight: bold;
 }
 
 #bekraftelse:empty {
   display: none;
 }
-
-
-
-
-
-
