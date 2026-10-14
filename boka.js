@@ -12,7 +12,7 @@ const dagar = [
 ];
 
 // Tider som går att boka
-const tider = ["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00"];
+const tider = ["08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00"];
 
 const NYCKEL = "bokningar";
 
@@ -46,7 +46,7 @@ function ritaSchema() {
         const rubrik = document.createElement("div");
         rubrik.className = "head";
         rubrik.textContent = dag.kort; // texten som syns
-        grid.append(rubrik);  
+        grid.append(rubrik);
     });
 
     // Skapar tiderna
@@ -63,9 +63,15 @@ function ritaSchema() {
             knapp.type = "button";
             knapp.id = `${d.id}-${tid}`; // eget namn för knappen, t.ex. "man-10:00"
             knapp.className = "slot";
-            knapp.textContent = "Ledig"; // alla börjar som lediga
+
+            if (hittaBokning(knapp.id)) {
+                knapp.disabled = true;
+                knapp.textContent = "Upptagen";
+            } else {
+                knapp.textContent = "Ledig";
+            }
             // Sparar dag och tid på knappen så vi kan läsa dem senare
-            knapp.dataset.dag = d.dag; 
+            knapp.dataset.dag = d.dag;
             knapp.dataset.tid = tid;
             grid.append(knapp); // lägger knappen i schemat
         });
