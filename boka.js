@@ -1,4 +1,6 @@
 const grid = document.querySelector("#grid");
+const fel = document.getElementById("fel");
+const bekraftelse = document.getElementById("bekraftelse");
 
 // Veckans dagar
 const dagar = [
@@ -12,9 +14,32 @@ const dagar = [
 // Tider som går att boka
 const tider = ["08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00"];
 
+const NYCKEL = "bokningar";
+
+let bokningar = laddaBokningar();
+
+let valdSlot = "null";
+
+function laddaBokningar() {
+    try {
+        const data = JSON.parse(localStorage.getItem(NYCKEL));
+        return Array.isArray(data) ? data : [];
+    } catch {
+        return [];
+    }
+}
+
+function sparaBokningar() {
+    localStorage.setItem(NYCKEL, JSON.stringify(bokningar));
+}
+
+function hittaBokning(slotId) {
+    return bokningar.find(b => b.slotId === slotId);
+}
+
 function ritaSchema() {
     grid.textContent = "";
-    grid.append(document.createElement("div")); // Tom ruta längst upp till vänster
+    grid.append(document.createElement("div"));
 
     // Skapar dagarna högst upp (Mån, Tis, Ons ...)
     dagar.forEach(dag => {
@@ -46,18 +71,18 @@ function ritaSchema() {
         });
     });
 }
+
+
 const form = document.getElementById("form");
 const valdTid = document.getElementById("vald-tid");
 const namnInput = document.getElementById("namn");
 
 // Klick på en slot i schemat
 grid.addEventListener("click", e => {
-    // Hittar knappen som klickades på 
     const knapp = e.target.closest(".slot");
-    if (!knapp) return;
+    if (!knapp || knapp.disabled) return;
 
-    // Visar vilken tid som är vald, med dag och tid från knappen
-    valdTid.textContent = `Vald tid: ${knapp.dataset.dag} ${knapp.dataset.tid}`;
+    valdSlot = { slotId: knapp.id, dag: knapp.dataset.dag, tid: knapp.dataset.tid };
 
     // Visar formuläret och sätter markören i namnfältet
     form.hidden = false;
@@ -66,19 +91,46 @@ grid.addEventListener("click", e => {
 
 // När man trycker på Boka
 form.addEventListener("submit", e => {
-    e.preventDefault();   // stoppar att sidan laddas om
+    e.preventDefault(); // stoppar att sidan laddas om
 
-    const namn = namnInput.value.trim();  
+    const namn = namnInput.value.trim();
 
-    // Tomt namn: visa felet på sidan
+    // Tomt namn
     if (!namn) {
         fel.textContent = "Skriv ditt namn för att boka.";
         namnInput.focus();
         return;
     }
-    
+
+    // Ingen tid vald
+    if (!valdSlot) {
+        fel.textContent = "Välj en tid i schemat först.";
+        return;
+    }
+
+    // Tiden är redan bokad
+    if (hittaBokning(valdSlot.slotId)) {
+        fel.textContent = "Tiden är redan bokad. Välj en annan tid.";
+        return;
+    }
+
+    // Spara bokningen
+    bokningar.push({
+        slotId: valdSlot.slotId,
+        dag: valdSlot.dag,
+        tid: valdSlot.tid,
+        namn: namn
+    });
+    sparaBokningar();
+
+    // Visa bekräftelsen och rensa formuläret
+    bekraftelse.textContent = `Tack ${namn}! Du har bokat ${valdSlot.dag} ${valdSlot.tid}.`;
     fel.textContent = "";
-})
+    valdSlot = null;
+    valdTid.textContent = "";
+    namnInput.value = "";
+    ritaSchema();
+});
 
 // Visa schemat
 ritaSchema();
