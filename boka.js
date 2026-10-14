@@ -46,6 +46,39 @@ function ritaSchema() {
         });
     });
 }
+const form = document.getElementById("form");
+const valdTid = document.getElementById("vald-tid");
+const namnInput = document.getElementById("namn");
+
+// Klick på en slot i schemat
+grid.addEventListener("click", e => {
+    // Hittar knappen som klickades på 
+    const knapp = e.target.closest(".slot");
+    if (!knapp) return;
+
+    // Visar vilken tid som är vald, med dag och tid från knappen
+    valdTid.textContent = `Vald tid: ${knapp.dataset.dag} ${knapp.dataset.tid}`;
+
+    // Visar formuläret och sätter markören i namnfältet
+    form.hidden = false;
+    namnInput.focus();
+});
+
+// När man trycker på Boka
+form.addEventListener("submit", e => {
+    e.preventDefault();   // stoppar att sidan laddas om
+
+    const namn = namnInput.value.trim();  
+
+    // Tomt namn: visa felet på sidan
+    if (!namn) {
+        fel.textContent = "Skriv ditt namn för att boka.";
+        namnInput.focus();
+        return;
+    }
+    
+    fel.textContent = "";
+})
 
 // Visa schemat
 ritaSchema();
