@@ -75,3 +75,5 @@ bokaNyTid.addEventListener("click", () => {
 });
 
 ritaBokningar();
+
+
