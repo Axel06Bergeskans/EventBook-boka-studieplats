@@ -1,0 +1,123 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #334155;
+}
+#contact-section {
+    padding: 50px 20px;
+}
+.contact-container {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #e0e6ed;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+#contact-section h2 {
+    margin-top: 0;
+    color: #243447;
+    font-size: 28px;
+    text-align: center;
+}
+.contact-description {
+    margin-bottom: 25px;
+    color: #64748b;
+    line-height: 1.6;
+    text-align: center;
+}
+.contact-info {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f4f7fb;
+    border-radius: 10px;
+}
+.info-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #dbe3ec;
+}
+.info-item:last-child {
+    border-bottom: none;
+}
+.info-item h3 {
+    margin: 0 0 8px;
+    color: #243447;
+    font-size: 17px;
+}
+.info-item p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+.info-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+.info-item a:hover {
+    text-decoration: underline;
+}
+.form-title {
+    margin-bottom: 20px;
+    color: #243447;
+    font-size: 21px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background-color: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+}
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+.submit-btn {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 7px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 600px) {
+    #contact-section {
+        padding: 25px 15px;
+    }
+    .contact-container {
+        padding: 22px 18px;
+    }
+    #contact-section h2 {
+        font-size: 24px;
+    }
+}
