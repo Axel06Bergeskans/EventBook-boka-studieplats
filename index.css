@@ -1,24 +1,28 @@
 *,
 ::before,
-::after{
+::after {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
+    background-color: #FFFBEB;
+
 }
 
-header{
-    height: 100vh;
+header {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
     width: 100%;
     background-image: url(images/ai-generated-dental-clinic-advertisment-background-with-copy-space-free-photo.jpg);
     background-size: cover;
-
 }
 
-.headerNavBox{
+.headerNavBox {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 11rem;
     padding-left: 5rem;
@@ -27,8 +31,207 @@ header{
     box-shadow: 0 .8rem .5rem -.6rem rgba(0, 0, 0, .2);
 }
 
-header img{
+header img {
     height: 45%;
     cursor: pointer;
 }
 
+nav {
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    gap: 1rem;
+}
+
+nav button {
+    width: 15rem;
+    height: 100%;
+    border: none;
+    font-size: 2rem;
+}
+
+nav button:hover {
+    background-color: #7ac69b;
+    cursor: pointer;
+}
+
+.headerTextBox {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: 100%;
+    margin-left: 3rem;
+    font-weight: bolder;
+    justify-content: center;
+}
+
+.headerTextBox h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.headerTextBox p {
+    font-size: 2rem;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+    width: 90%;
+    height: 100%;
+}
+
+.cardSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 80%;
+    height: 15rem;
+    background-color: rgba(160, 160, 255, 0.79);
+    transition: .2s;
+}
+
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.cardText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardImage {
+    background-size: cover;
+}
+
+.cardSection .card:nth-child(1) .cardImage {
+    background-image: url("images/da406c1d5a6048d1dcdc5f536f564d07.jpg");
+}
+
+.cardSection .card:nth-child(2) .cardImage {
+    background-image: url("images/8cc23d0b707bf58f9e2963b1e20825d5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cardSection .card:nth-child(3) .cardImage {
+    background-image: url("images/2e6b23cae622112d4364f21925abfdc4.jpg");
+}
+
+
+.whyUs {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    row-gap: 2rem;
+    width: 100%;
+    height: 100vh;
+}
+
+.whyUsText {
+    display: grid;
+    grid-template-rows: 50%;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    font-size: 3.5rem;
+    background-color: rgb(204, 153, 252);
+}
+
+.whyUsText h3 {
+    font-size: 3.5rem;
+    margin-bottom: 0px;
+}
+
+.whyUsImg {
+    background-image: url("images/54c7aaf598fa8e01d2cd54c3d64ce2be.jpg");
+    background-size: cover;
+}
+
+.omOssText {
+    display: grid;
+    grid-template-rows: 50%;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    background-color: rgb(204, 153, 252);
+}
+
+.whyUs :nth-child(4){
+    background-image: url(images/84c28f97268d07dea2aeaeec937b6d17.jpg);
+}
+
+.omOssText h3 {
+    font-size: 3.5rem;
+    margin-bottom: 0px;
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30rem;
+    padding-right: 30rem;
+    margin-top: 1rem;
+    height: 20vh;
+    width: 100%;
+    font-size: large;
+    background-color: whitesmoke;
+    box-shadow: 0 -.8rem .5rem -.6rem rgba(0, 0, 0, .2);
+
+}
+
+.infoBox{
+    display: flex;
+    width: 10rem;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    height: 100%;
+    width: 10rem;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boka tandläkartid</title>
+  <link rel="stylesheet" href="boka.css">
+  <script src="boka.js" defer></script>
+</head>
+
+<body>
+  <header class="site">
+    <h1>Boka tandläkartid</h1>
+
+    <nav>
+      <a href="index.html">Huvudmeny</a>
+      <a href="bokade_tider.html">Mina bokningar</a>
+      <a href="kontakt">Kontakter</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="lead">Välj en ledig tid i schemat och skriv ditt namn.</p>
+
+    <div class="grid" id="grid"></div>
+
+    <form id="form" hidden>
+      <p id="vald-tid"></p>
+      <label for="namn">Ditt namn</label>
+      <input id="namn" type="text" autocomplete="name">
+      <button type="submit">Boka</button>
+      <p id="fel" role="alert"></p>
+      <p id="bekraftelse" role="status"></p>
+    </form>
+
+  </main>
+</body>
+
+</html>
