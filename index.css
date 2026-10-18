@@ -236,3 +236,194 @@ a {
 footer a:hover{
     text-decoration: underline;
 }
+
+
+/* Mobilanpassning */
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        height: auto;
+        min-height: 75vh;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .headerNavBox {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .headerNavBox img {
+        height: 4rem;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        flex: 1 1 40%;
+        max-width: 180px;
+    }
+
+    nav button {
+        width: 100%;
+        min-height: 3rem;
+        padding: 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    .headerTextBox {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin: auto 1rem;
+        padding: 3rem 0;
+        overflow-wrap: anywhere;
+    }
+
+    .headerTextBox h1 {
+        font-size: 2.5rem;
+    }
+
+    .headerTextBox p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    main {
+        width: 92%;
+        gap: 1rem;
+    }
+
+    .cardSection {
+        height: auto;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 12rem;
+        width: 100%;
+        height: auto;
+        min-height: 18rem;
+    }
+
+    .cardText {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .cardText h2 {
+        font-size: 1.3rem;
+    }
+
+    .cardImage {
+        min-height: 12rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    .whyUs {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+        row-gap: 0;
+    }
+
+    .whyUsText,
+    .omOssText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem 1rem;
+        min-height: 15rem;
+        font-size: 1.2rem;
+        overflow-wrap: anywhere;
+    }
+
+    .whyUsText h3,
+    .omOssText h3 {
+        font-size: 2rem;
+        margin: 0 0 1rem;
+    }
+
+    .whyUsText p,
+    .omOssText p {
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .whyUsImg {
+        min-height: 15rem;
+        background-position: center;
+        background-size: cover;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+        height: auto;
+        min-height: 15rem;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .infoBox,
+    .tider {
+        width: 100%;
+        height: auto;
+        gap: 0.75rem;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+}
+
+/* Extra små mobiler */
+@media screen and (max-width: 380px) {
+    nav a {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .headerTextBox h1 {
+        font-size: 2rem;
+    }
+
+    .headerTextBox p {
+        font-size: 1rem;
+    }
+
+    .whyUsText h3,
+    .omOssText h3 {
+        font-size: 1.7rem;
+    }
+
+    .card {
+        grid-template-rows: auto 10rem;
+    }
+}
+     

@@ -112,3 +112,117 @@
         font-size: 24px;
     }
 }
+
+
+/* Mobilanpassning */
+@media screen and (max-width: 600px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        width: 100%;
+        height: auto;
+    }
+
+    .headerNavBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .headerNavBox img {
+        width: 3.5rem;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .headerNavBox nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .headerNavBox nav a {
+        flex: 1 1 40%;
+        max-width: 150px;
+        text-decoration: none;
+    }
+
+    .headerNavBox nav button {
+        width: 100%;
+        min-height: 2.75rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    #contact-section {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .contact-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1.25rem 1rem;
+        border-radius: 10px;
+    }
+
+    #contact-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .contact-description {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .contact-info {
+        padding: 0.75rem;
+        overflow-wrap: anywhere;
+    }
+
+    .info-item h3 {
+        font-size: 1rem;
+    }
+
+    .info-item p {
+        font-size: 0.95rem;
+    }
+
+    .form-title {
+        font-size: 1.2rem;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 0.75rem;
+        font-size: 16px;
+    }
+
+    .form-group textarea {
+        min-height: 7rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 0.85rem;
+        font-size: 1rem;
+    }
+}
+
+
