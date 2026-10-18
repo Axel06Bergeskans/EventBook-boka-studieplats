@@ -5,6 +5,8 @@
 
 EventBook är en webbapplikation som gör det enkelt för studenter att se lediga tider och boka en studieplats. Användaren kan välja en ledig tid, ange sitt namn och få en bekräftelse på bokningen.
 
+(Omplanering... Vi valde istället att göra samma funktioner och principer, fast för en tandläkarklinik.)
+
 Målet är att skapa en tydlig och användarvänlig webbplats där det enkelt går att se vilka tider som är lediga respektive bokade.
 
 ## Gruppmedlemmar
