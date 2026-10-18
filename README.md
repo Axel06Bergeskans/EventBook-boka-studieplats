@@ -87,3 +87,5 @@ En viktig del av projektet var att se till att bokningarna sparas korrekt och fi
 ## AI-användning
 
 AI användes flertalet gånger under utvecklingen av sidan, allt för att förstå strukturen och hur vi skulle få ihop de olika skripten. De skript vi gjort är alltså inte kopierade rakt av. AI är använt som et verktyg.
+
+Vi använde bland annat AI för att snabbt kunna rendera vår @media istället för att manuellt behöva ändra allt.
