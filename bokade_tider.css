@@ -135,3 +135,135 @@ a {
 footer a:hover{
     text-decoration: underline;
 }
+
+
+/* Mobilanpassning */
+@media screen and (max-width: 768px) {
+    body {
+        min-height: 100vh;
+        background-attachment: scroll;
+        background-position: center;
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        max-height: none;
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+        margin: 0.5rem 0;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 0;
+        padding: 0.7rem;
+        max-width: none;
+        line-height: normal;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    #Boknings-lista {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    #bokningar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .Boknings-kort {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 350px;
+        margin: 0;
+        padding: 1.5rem;
+        border-width: 2px;
+        overflow-wrap: anywhere;
+    }
+
+    .Boknings-kort h2 {
+        font-size: 1.3rem;
+    }
+
+    .Avboka-Tiden {
+        max-width: 100%;
+        padding: 0.7rem;
+        line-height: normal;
+    }
+
+    .Boka-ny-tid {
+        display: block;
+        margin: 1.5rem auto;
+        max-width: 90%;
+        padding: 1rem;
+        line-height: normal;
+        font-size: 1rem;
+    }
+
+    footer {
+        position: static;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
+        min-height: auto;
+        padding: 1.5rem 1rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .infoBox,
+    .tider {
+        width: 100%;
+        height: auto;
+        gap: 0.75rem;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+}
+
+/* Extra små mobiler */
+@media screen and (max-width: 380px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .Boknings-kort {
+        padding: 1rem;
+    }
+
+    #bokningar {
+        padding: 0.5rem;
+    }
+}
